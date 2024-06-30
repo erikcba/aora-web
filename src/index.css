@@ -1,0 +1,116 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.hero-bg{
+    height: 62svh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 62px;
+}
+
+.home-hero {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./assets/heroImage-form.png");
+}
+
+.deptos-hero{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./assets/Carousel-imgs/unidades01.png");
+}
+
+.comercial-hero {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./assets/comercial-hero.png");
+}
+
+.amenities-hero{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./assets/Amenities-hero.png");
+}
+
+
+.hero-bg .container {
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo h1{
+    font-size: 5rem;
+    font-weight: normal;
+    color: #fff;
+}
+
+.form-container {
+    color: #fff;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    border: solid 1px #fff;
+    padding: 45px 35px;
+    gap: 30px;
+}
+
+.input {
+    padding: 14px;
+    border-radius: 0;
+    border:solid 1px #ADAFAF;
+}
+
+.input::placeholder {
+    color:#ADAFAF
+}
+
+.input-footer {
+    padding: 14px;
+    border-radius: 0;
+    border:solid 1px #DDDDDD;
+}
+
+.input-footer::placeholder {
+    color:#DDDDDD
+}
+
+.button{
+    padding: 10px;
+    background-color: #92D050;
+    border: none;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    height: 56px;
+}
+
+.form-select-lg {
+    border-radius: 0;
+    height: 56px;
+    border:solid 1px #DDDDDD;
+}
+
+select:invalid {
+    color: #ADAFAF;
+}
+
+select.input option {
+    font-size: 18px;
+    padding: 10px;
+    height: 30px;
+    color: black;
+}
+
+.img-home {
+    width: 100%;
+}
+
+.my-100 {
+    margin: 100px auto;
+}
+
+.wsp-icono {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+}
