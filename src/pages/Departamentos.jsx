@@ -11,7 +11,7 @@ const Departamentos = () => {
             <div className="hero-bg deptos-hero ">
 
                 <div className="container d-flex align-items-center justify-content-center">
-                    <div className="titulo col-6">
+                    <div className="titulo col-12 col-lg-6">
                         <h1>Tu lugar por naturaleza.</h1>
                     </div>
                     <FormHeader />

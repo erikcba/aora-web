@@ -6,7 +6,8 @@
 }
 
 .hero-bg{
-    height: 62svh;
+    padding-top: 72px;
+    min-height: 62svh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -135,4 +136,25 @@ select.input option {
     background-image: url("../src/assets/Carousel-imgs/carousel-previous-control.png");
     height: 3rem;
     width: 1.7rem;
+}
+
+@media (max-width: 992px) {
+
+    .responsive {
+        justify-content: space-around !important;
+    }
+
+    .titulo h1{
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
 }

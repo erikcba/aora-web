@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
-                <div className="container d-flex align-content-center justify-content-center">
+                <div className="container d-flex align-content-center justify-content-center responsive">
                     <Link to={"/"} className="navbar-brand" >
                        <img src={logoImg} alt="AORA" width="90" height="42"/>
                     </Link>
