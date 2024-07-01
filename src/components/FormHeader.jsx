@@ -25,7 +25,7 @@ const FormHeader = () => {
     return (
         <>
 
-            <div className="form-container d-flex flex-column justify-content-center p-8 col-6">
+            <div className="form-container d-flex flex-column justify-content-center p-8 col-12 col-lg-6">
                 <h2 className="text-center ms-auto me-auto col-8 fw-normal">
                     Dejanos tus datos y nos contactaremos con vos.
                 </h2>
