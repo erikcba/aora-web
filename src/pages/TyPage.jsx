@@ -1,21 +1,38 @@
-import FormHeader from "../components/FormHeader"
+import { useNavigate } from "react-router-dom"
+import rightArrow from "../assets/right-arrow.svg"
+import FooterTyPage from "../components/FooterTyPage"
+
 
 const TyPage = () => {
+
+    const navigate = useNavigate()
+
+    const handleClick = () => {
+        navigate('/')
+    }
+
     return (
         <>
 
             <div className="hero-bg home-hero">
 
-                <div className="container d-flex align-items-center justify-content-center">
-                    <div className="titulo col-6">
-                        <h1>Tu lugar por naturaleza.</h1>
+                <div className="container">
+                    <div className="container titulo d-flex flex-column align-items-center justify-content-center titulo2 gap-4">
+                        <h1 className="text-center ">¡Gracias!</h1>
+                        <h1 className="text-center ">Pronto nos comunicaremos con vos.</h1>
+                        <button onClick={handleClick} className="button d-flex align-items-center justify-content-center gap-2 my-2" type="submit">
+                            <p className="lh-lg m-0">Continuar</p>
+                            <img src={rightArrow} alt="flecha-derecha" />
+                        </button>
                     </div>
 
-                    <FormHeader />
+
 
                 </div>
 
             </div>
+
+            <FooterTyPage/>
 
         </>
     )

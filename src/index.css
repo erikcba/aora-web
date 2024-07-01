@@ -2,6 +2,7 @@
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 10000;
 }
 
 .hero-bg{
@@ -44,6 +45,10 @@
     font-size: 5rem;
     font-weight: normal;
     color: #fff;
+}
+
+.titulo2 h1{
+    font-size: 4rem;
 }
 
 .form-container {
@@ -113,4 +118,21 @@ select.input option {
     position: fixed;
     bottom: 60px;
     right: 60px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    opacity: 1;
+    padding: 0 15px;
+}
+
+.carousel-control-next-icon{
+    background-image: url("../src/assets/Carousel-imgs/carousel-control-next.png");
+    height: 3rem;
+    width: 1.7rem;
+}
+
+.carousel-control-prev-icon{
+    background-image: url("../src/assets/Carousel-imgs/carousel-previous-control.png");
+    height: 3rem;
+    width: 1.7rem;
 }
