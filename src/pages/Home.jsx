@@ -1,6 +1,8 @@
 import img1 from "../assets/AORABV-Slide22.png"
 import img2 from "../assets/AORABV-Slide5.png"
 import img3 from "../assets/AORABV-Slide10.png"
+import arrowDown from "../assets/arrow.png"
+
 import Mapa from "../components/Mapa"
 import Footer from "../components/Footer"
 import FormHeader from "../components/FormHeader"
@@ -12,8 +14,9 @@ const Home = () => {
       <div className="hero-bg home-hero">
 
         <div className="container d-flex align-items-center justify-content-center">
-          <div className="titulo col-12 col-lg-6">
+          <div className="titulo flex-column justify-content-center col-12 col-lg-6 gap-5">
             <h1>Tu lugar por naturaleza.</h1>
+            <img className="hide" src={arrowDown} alt="arrowDown" />
           </div>
 
           <FormHeader/>

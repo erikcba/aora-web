@@ -1,5 +1,6 @@
 import { useState } from "react";
 import rightArrow from "../assets/right-arrow.svg"
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -11,13 +12,21 @@ const FormHeader = () => {
     const [telefono, setTelefono] = useState('')
     const [mail, setMail] = useState('')
 
+    const navigate = useNavigate()
+
     const handleSelectChange = (event) => {
         setSelectedOption(event.target.value)
     };
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(nombre, apellido, telefono, mail, selectedOption)
+        if (nombre && apellido && telefono && mail && selectedOption !== '') {
+            navigate('/typage')
+            console.log(nombre, apellido, telefono, mail, selectedOption)
+        } else {
+            alert('Completa todos los campos')
+        }
+
     }
 
 
@@ -26,7 +35,7 @@ const FormHeader = () => {
         <>
 
             <div className="form-container d-flex flex-column justify-content-center p-8 col-12 col-lg-6 mb-4">
-                <h2 className="text-center ms-auto me-auto col-8 fw-normal">
+                <h2 className="text-center ms-auto me-auto col-12 col-lg-10 fw-normal">
                     Dejanos tus datos y nos contactaremos con vos.
                 </h2>
 

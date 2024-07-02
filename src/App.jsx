@@ -8,6 +8,7 @@ import Comercial from './pages/Comercial'
 import Amenities from './pages/Amenities'
 import Contacto from './pages/Contacto'
 import TyPage from './pages/TyPage'
+import Descarga from './pages/Descarga'
 
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
           <Route path='/comercial' element={<Comercial />} />
           <Route path='/amenities' element={<Amenities />} />
           <Route path='/contacto' element={<Contacto />} />
-          <Route path='typage' element={<TyPage/>}/>
+          <Route path='/typage' element={<TyPage/>}/>
+          <Route path='/descarga' element={<Descarga/>}/>
         </Routes>
         <div className="wsp-icono">
           <WspIcono />

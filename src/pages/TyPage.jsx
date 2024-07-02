@@ -14,7 +14,7 @@ const TyPage = () => {
     return (
         <>
 
-            <div className="hero-bg home-hero">
+            <div className="hero-bg home-hero d-flex align-items-center">
 
                 <div className="container">
                     <div className="container titulo d-flex flex-column align-items-center justify-content-center titulo2 gap-4">

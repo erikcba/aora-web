@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+
 .navbar {
     position: fixed;
     width: 100%;
@@ -15,19 +21,19 @@
 }
 
 .home-hero {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./assets/heroImage-form.png");
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./assets/heroImage-form.png");
 }
 
 .deptos-hero{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./assets/Carousel-imgs/unidades01.png");
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./assets/Carousel-imgs/unidades01.png");
 }
 
 .comercial-hero {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./assets/comercial-hero.png");
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./assets/comercial-hero.png");
 }
 
 .amenities-hero{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./assets/Amenities-hero.png");
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./assets/Amenities-hero.png");
 }
 
 
@@ -142,6 +148,14 @@ select.input option {
 
     .responsive {
         justify-content: space-around !important;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .hero-bg {
+        padding-top: 30px;
     }
 
     .titulo h1{
