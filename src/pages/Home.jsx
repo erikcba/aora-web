@@ -1,6 +1,7 @@
 import img1 from "../assets/AORABV-Slide22.png"
 import img2 from "../assets/AORABV-Slide5.png"
 import img3 from "../assets/AORABV-Slide10.png"
+// import O from "../assets/favIcon.png"
 import arrowDown from "../assets/arrow.png"
 
 import Mapa from "../components/Mapa"

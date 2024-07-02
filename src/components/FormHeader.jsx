@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import rightArrow from "../assets/right-arrow.svg"
 import { useNavigate } from "react-router-dom";
 
@@ -11,6 +11,14 @@ const FormHeader = () => {
     const [apellido, setApellido] = useState('')
     const [telefono, setTelefono] = useState('')
     const [mail, setMail] = useState('')
+    const [pageURL, setPageURL] = useState('')
+    
+
+    useEffect(() => {
+        setPageURL(`Form hero ${window.location.href}` )
+        
+    }, [])
+    
 
     const navigate = useNavigate()
 
@@ -22,7 +30,7 @@ const FormHeader = () => {
         e.preventDefault()
         if (nombre && apellido && telefono && mail && selectedOption !== '') {
             navigate('/typage')
-            console.log(nombre, apellido, telefono, mail, selectedOption)
+            console.log(nombre, apellido, telefono, mail, selectedOption,pageURL)
         } else {
             alert('Completa todos los campos')
         }
@@ -40,6 +48,7 @@ const FormHeader = () => {
                 </h2>
 
                 <form onSubmit={handleSubmit} className="d-flex justify-content-center flex-column gap-2" action="https://formspree.io/f/mdknokeo" method="POST">
+                <input type="hidden" name="URL" value={pageURL} />
                     <input onChange={(e) => setNombre(e.target.value)} className="input" name="Nombre" type="text" placeholder="Nombre" required />
                     <input onChange={(e) => setApellido(e.target.value)} className="input" name="Apellido" type="text" placeholder="Apellido" required />
                     <input onChange={(e) => setTelefono(e.target.value)} className="input" name="Telefono" type="text" placeholder="Teléfono" required />
