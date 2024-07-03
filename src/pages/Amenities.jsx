@@ -3,8 +3,21 @@ import Footer from "../components/Footer"
 import FormHeader from "../components/FormHeader"
 import arrowDown from "../assets/arrow.png"
 
+import img1 from "../assets/Carousel-imgs/ameni-01-desk.png"
+import img2 from "../assets/Carousel-imgs/ameni-02-desk.png"
+import img3 from "../assets/Carousel-imgs/ameni-03-desk.png"
+import img4 from "../assets/Carousel-imgs/ameni-04-desk.png"
+import img1mob from "../assets/Carousel-imgs/ameni-01-mob.png"
+import img2mob from "../assets/Carousel-imgs/ameni-02-mob.png"
+import img3mob from "../assets/Carousel-imgs/ameni-03-mob.png"
+import img4mob from "../assets/Carousel-imgs/ameni-04-mob.png"
+
 
 const Amenities = () => {
+
+  const imgDesk = [img1, img2, img3, img4]
+  const imgMob = [img1mob, img2mob, img3mob, img4mob]
+
   return (
     <>
 
@@ -26,7 +39,7 @@ const Amenities = () => {
         <p className="text-center fs-4">Amenities premium integran la propuesta. El Complejo cuenta con pileta, dos Salones de Usos Múltiples (SUM), ROOFTOP, gimnasio y un espacio coworking.</p>
       </div>
 
-      <Carousel/>
+      <Carousel desktopImages={imgDesk} mobileImages={imgMob}/>
       <Footer/>
 
     </>

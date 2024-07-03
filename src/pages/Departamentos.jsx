@@ -3,10 +3,21 @@ import Footer from "../components/Footer"
 import FormHeader from "../components/FormHeader"
 import arrowDown from "../assets/arrow.png"
 
+import img1 from "../assets/Carousel-imgs/dep-01-desk.png"
+import img2 from "../assets/Carousel-imgs/dep-02-desk.png"
+import img3 from "../assets/Carousel-imgs/dep-03-desk.png"
+import img1mob from "../assets/Carousel-imgs/dep-01-mob.png"
+import img2mob from "../assets/Carousel-imgs/dep-02-mob.png"
+import img3mob from "../assets/Carousel-imgs/dep-03-mob.png"
+
 
 
 
 const Departamentos = () => {
+
+    const imgDeptoDesk = [img1, img2, img3]
+    const imgDeptoMob = [img1mob, img2mob, img3mob]
+
     return (
         <>
 
@@ -27,9 +38,9 @@ const Departamentos = () => {
                 <p className="text-center fs-4">Un amplio corredor verde central, visuales 360º y seguridad 24hs completan la propuesta.</p>
             </div>
 
-            <Carousel/>
-            <Footer/>
-            
+            <Carousel mobileImages={imgDeptoMob} desktopImages={imgDeptoDesk} />
+            <Footer />
+
 
         </>
     )

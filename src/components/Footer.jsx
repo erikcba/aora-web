@@ -64,10 +64,10 @@ const Footer = () => {
                         <div className="col-12 col-lg-6">
                             <select className="col-12 form-select-lg mb-3 " aria-label=" select example" value={selectedOption} onChange={handleSelectChange} required>
                                 <option disabled selected value="">Selecciona el tipo de unidad</option>
-                                <option value="1">Departamento de 2 ambientes</option>
-                                <option value="2">Departamento de 3 ambientes</option>
-                                <option value="3">Local</option>
-                                <option value="3">Oficina</option>
+                                <option value="Depto. 2 ambientes">Departamento de 2 ambientes</option>
+                                <option value="Depto. 3 ambientes">Departamento de 3 ambientes</option>
+                                <option value="Local">Local</option>
+                                <option value="Oficina">Oficina</option>
                             </select>
                         </div>
                         <div className="col-12 col-lg-6">

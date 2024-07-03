@@ -1,29 +1,48 @@
-import img1 from "../assets/Carousel-imgs/unidades01.png"
-import img2 from "../assets/Carousel-imgs/unidades022.png"
-import img3 from "../assets/Carousel-imgs/unidades033.png"
+import { useState } from "react"
 
 
-const Carousel = () => {
+const Carousel = ({ mobileImages, desktopImages }) => {
+
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+    const siguiente = () => {
+        setCurrentIndex((currentIndex + 1) % Math.max(mobileImages.length, desktopImages.length))
+    }
+
+    const anterior = () => {
+        setCurrentIndex((currentIndex - 1 + Math.max(mobileImages.length, desktopImages.length)) % Math.max(mobileImages.length, desktopImages.length))
+    }
+
+
     return (
         <>
 
             <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img src={img1} className="d-block w-100" alt="..."/>
-                    </div>
-                    <div className="carousel-item">
-                        <img src={img2} className="d-block w-100" alt="..."/>
-                    </div>
-                    <div className="carousel-item">
-                        <img src={img3} className="d-block w-100" alt="..."/>
-                    </div>
+                    {mobileImages.map((img, index) => (
+                        <div key={index} className={`carousel-item ${currentIndex === index ? 'active' : ''}`}>
+                            <img
+                                src={img}
+                                alt={`Mobile Slide ${index}`}
+                                className="w-100 img-mob"
+                            />
+                        </div>
+                    ))}
+                    {desktopImages.map((img, index) => (
+                        <div key={index} className={`carousel-item ${currentIndex === index ? 'active' : ''}`}>
+                            <img
+                                src={img}
+                                alt={`Desktop Slide ${index}`}
+                                className="w-100 img-desk"
+                            />
+                        </div>
+                    ))}
                 </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" onClick={anterior}>
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Previous</span>
                 </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" onClick={siguiente}>
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Next</span>
                 </button>
