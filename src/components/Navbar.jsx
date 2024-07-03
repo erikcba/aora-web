@@ -1,14 +1,21 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import logoImg from "../assets/AORA-logo.png"
+import { useEffect } from "react";
 
 
 const Navbar = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container d-flex align-content-center justify-content-center responsive">
                     <Link to={"/"} className="navbar-brand" >
-                       <img src={logoImg} alt="AORA" width="90" height="42"/>
+                        <img src={logoImg} alt="AORA" width="90" height="42" />
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -25,9 +32,9 @@ const Navbar = () => {
                                 <Link className="nav-link fw-medium" to={'/amenities'}>AMENITIES</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link fw-medium" to={'/contacto'}>CONTACTO</Link>
+                                <a className="nav-link fw-medium" href="#footer">CONTACTO</a>
                             </li>
-                                 
+
                         </ul>
                     </div>
                 </div>

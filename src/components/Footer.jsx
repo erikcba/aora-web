@@ -40,7 +40,7 @@ const Footer = () => {
     return (
         <>
 
-            <div className="container my-100">
+            <div id="footer" className="container my-100">
 
                 <h3>
                     CONTACTO

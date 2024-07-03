@@ -19,7 +19,7 @@ const Carousel = ({ mobileImages, desktopImages }) => {
 
             <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
-                    {mobileImages.map((img, index) => (
+                    {mobileImages && mobileImages.map((img, index) => (
                         <div key={index} className={`carousel-item ${currentIndex === index ? 'active' : ''}`}>
                             <img
                                 src={img}
@@ -28,7 +28,7 @@ const Carousel = ({ mobileImages, desktopImages }) => {
                             />
                         </div>
                     ))}
-                    {desktopImages.map((img, index) => (
+                    {desktopImages && desktopImages.map((img, index) => (
                         <div key={index} className={`carousel-item ${currentIndex === index ? 'active' : ''}`}>
                             <img
                                 src={img}
