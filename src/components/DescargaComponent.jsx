@@ -5,7 +5,7 @@ const DescargaComponent = () => {
     return (
         <>
 
-            <div className="form-container d-flex flex-column justify-content-center p-8 col-12 col-lg-6 mb-4">
+            <div className="form-container d-flex flex-column justify-content-center p-8 col-12 mb-4">
                 <h2 className="text-center ms-auto me-auto col-12 fw-normal">
                     Descargá toda la información de cada tipología y sus unidades
                 </h2>

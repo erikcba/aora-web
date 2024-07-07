@@ -160,7 +160,7 @@ select.input option {
 @media (max-width: 992px) {
 
     .responsive {
-        justify-content: space-around !important;
+        justify-content: space-between !important;
     }
 
     .hide {
@@ -185,9 +185,21 @@ select.input option {
         flex-direction: column-reverse;
     }
 
+    .form-select-lg{
+        font-size: 1.1rem;
+    }
+
+    select:invalid {
+        font-size: 1.1rem;
+    }
+
     .wsp-icono {
         bottom: 30px;
         right: 30px;
+    }
+
+    .wsp-icono img {
+        width: 65px;
     }
 
     .img-desk {
@@ -196,6 +208,10 @@ select.input option {
     
     .img-mob {
         display: block;
+    }
+
+    .logo-mob{
+        width: 100%;
     }
     
 }
