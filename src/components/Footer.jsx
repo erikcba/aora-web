@@ -4,6 +4,7 @@ import rootLogoFooter from "../assets/root-logo-footer.png"
 import arqLogoFooter from "../assets/arq-logo-footer.png"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import sendTokkoApi from "../helpers/sendTokkoApi"
 
 
 const Footer = () => {
@@ -14,6 +15,7 @@ const Footer = () => {
     const [apellido, setApellido] = useState('')
     const [telefono, setTelefono] = useState('')
     const [mail, setMail] = useState('')
+    const tags = pageURL
 
     useEffect(() => {
         setPageURL(`Form footer ${window.location.href}`)
@@ -26,11 +28,29 @@ const Footer = () => {
         setSelectedOption(event.target.value)
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         if (nombre && apellido && telefono && mail && selectedOption !== '') {
-            navigate('/typage')
-            console.log(nombre, apellido, telefono, mail, selectedOption, pageURL)
+            const data = {
+                api_key: import.meta.env.VITE_TOKKO_API_KEY,
+                name: `${nombre} ${apellido}`,
+                phone: telefono,
+                mail: mail,
+                message: `Tipo de unidad: ${selectedOption}, Page URL: ${pageURL}`,
+                tags: tags
+            }
+            console.log(data)
+            try {
+                const response = await sendTokkoApi(data)
+                if (response) {
+                    navigate('/typage')
+                    console.log(nombre, apellido, telefono, mail, selectedOption, pageURL, tags)
+                }
+            } catch (error) {
+                alert('Error al enviar formulario')
+                console.error('Error:', error);
+            }
+
         } else {
             alert('Completa todos los campos')
         }
@@ -59,7 +79,7 @@ const Footer = () => {
                             <input onChange={(e) => setTelefono(e.target.value)} className="input-footer col-12" type="text" placeholder="Teléfono" required />
                         </div>
                         <div className="col-12 col-lg-6">
-                            <input onChange={(e) => setMail(e.target.value)} className="input-footer col-12" type="text" placeholder="E-mail" required  />
+                            <input onChange={(e) => setMail(e.target.value)} className="input-footer col-12" type="text" placeholder="E-mail" required />
                         </div>
                         <div className="col-12 col-lg-6">
                             <select className="col-12 form-select-lg mb-3 " aria-label=" select example" value={selectedOption} onChange={handleSelectChange} required>

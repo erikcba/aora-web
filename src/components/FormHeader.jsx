@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 import rightArrow from "../assets/right-arrow.svg"
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
+import sendTokkoApi from "../helpers/sendTokkoApi"
 
 
 
@@ -12,13 +13,14 @@ const FormHeader = () => {
     const [telefono, setTelefono] = useState('')
     const [mail, setMail] = useState('')
     const [pageURL, setPageURL] = useState('')
-    
+    const tags = pageURL
+
 
     useEffect(() => {
-        setPageURL(`Form hero ${window.location.href}` )
-        
+        setPageURL(`Form hero ${window.location.href}`)
+
     }, [])
-    
+
 
     const navigate = useNavigate()
 
@@ -26,11 +28,30 @@ const FormHeader = () => {
         setSelectedOption(event.target.value)
     };
 
-    const handleSubmit = (e) => {
+    
+    const handleSubmit = async (e) => {
         e.preventDefault()
         if (nombre && apellido && telefono && mail && selectedOption !== '') {
-            navigate('/typage')
-            console.log(nombre, apellido, telefono, mail, selectedOption,pageURL)
+            const data = {
+                api_key: import.meta.env.VITE_TOKKO_API_KEY,
+                name: `${nombre} ${apellido}`,
+                phone: telefono,
+                mail: mail,
+                message: `Tipo de unidad: ${selectedOption}, Page URL: ${pageURL}`,
+                tags: tags
+            }
+            console.log(data)
+            try {
+                const response = await sendTokkoApi(data)
+                if (response) {
+                    navigate('/typage')
+                    console.log(nombre, apellido, telefono, mail, selectedOption, pageURL, tags)
+                }
+            } catch (error) {
+                alert('Error al enviar formulario')
+                console.error('Error:', error);
+            }
+
         } else {
             alert('Completa todos los campos')
         }
@@ -48,7 +69,7 @@ const FormHeader = () => {
                 </h2>
 
                 <form onSubmit={handleSubmit} className="d-flex justify-content-center flex-column gap-2" action="https://formspree.io/f/mdknokeo" method="POST">
-                <input type="hidden" name="URL" value={pageURL} />
+                    <input type="hidden" name="URL" value={pageURL} />
                     <input onChange={(e) => setNombre(e.target.value)} className="input" name="Nombre" type="text" placeholder="Nombre" required />
                     <input onChange={(e) => setApellido(e.target.value)} className="input" name="Apellido" type="text" placeholder="Apellido" required />
                     <input onChange={(e) => setTelefono(e.target.value)} className="input" name="Telefono" type="text" placeholder="Teléfono" required />
