@@ -1,8 +1,10 @@
-# React + Vite
+* En el apartado etiquetas se va a detallar desde que formulario se envio la consulta (Del Hero o Footer) y desde que pagina (Home, comercial, departamentos, etc.)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+* Desde el home: https://aorabellavista.com/
+* Desde departamentos: https://aorabellavista.com/departamentos
+* Desde comercial: https://aorabellavista.com/comercial
+* Desde Amenities: https://aorabellavista.com/amenities
 
-Currently, two official plugins are available:
+* Esto precedido por: Form hero o Form footer 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Ejemplo: Form hero https://aorabellavista.com/departamentos

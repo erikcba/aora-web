@@ -62,7 +62,7 @@ const Home = () => {
           </div>
           <div className="col-12 col-lg-4">
             <p className="fs-4 fw-light">
-              <b className="fw-bold">AORA Bella Vista</b> cuenta con unidades amplias y luminosas, de 2 y 3 ambientes, balcón terraza con parrilla propia; complementadas con una propuesta comercial y oficinas.
+              <b className="fw-bold">AORA Bella Vista</b> cuenta con unidades amplias y luminosas, de 2 y 3 ambientes, balcón terraza con parrilla propia y cochera en planta baja cubiertas; complementadas con una propuesta comercial y oficinas.
             </p>
           </div>
         </div>

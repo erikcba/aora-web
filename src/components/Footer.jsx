@@ -15,7 +15,7 @@ const Footer = () => {
     const [apellido, setApellido] = useState('')
     const [telefono, setTelefono] = useState('')
     const [mail, setMail] = useState('')
-    const tags = pageURL
+    const tags = `Tipo de unidad: ${selectedOption} / Enviado desde: ${pageURL}`
 
     useEffect(() => {
         setPageURL(`Form footer ${window.location.href}`)
@@ -35,16 +35,13 @@ const Footer = () => {
                 api_key: import.meta.env.VITE_TOKKO_API_KEY,
                 name: `${nombre} ${apellido}`,
                 phone: telefono,
-                mail: mail,
-                message: `Tipo de unidad: ${selectedOption}, Page URL: ${pageURL}`,
+                email: mail,
                 tags: tags
             }
-            console.log(data)
             try {
                 const response = await sendTokkoApi(data)
                 if (response) {
                     navigate('/typage')
-                    console.log(nombre, apellido, telefono, mail, selectedOption, pageURL, tags)
                 }
             } catch (error) {
                 alert('Error al enviar formulario')

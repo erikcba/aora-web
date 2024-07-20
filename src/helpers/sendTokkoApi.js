@@ -28,7 +28,6 @@ const sendTokkoApi = async (data) => {
             const text = await response.text()
             if (text) {
                 const jsonResponse = JSON.parse(text)
-                console.log(jsonResponse);
                 return jsonResponse;
             } else {
                 console.warn('La respuesta no contiene un cuerpo JSON.')
