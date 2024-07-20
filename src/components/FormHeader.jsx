@@ -13,8 +13,7 @@ const FormHeader = () => {
     const [telefono, setTelefono] = useState('')
     const [mail, setMail] = useState('')
     const [pageURL, setPageURL] = useState('')
-    const tags = `Tipo de unidad: ${selectedOption} / Enviado desde: ${pageURL}`
-
+    const tags = [selectedOption, pageURL]
 
     useEffect(() => {
         setPageURL(`Form hero ${window.location.href}`)
