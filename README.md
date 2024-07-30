@@ -1,3 +1,7 @@
+* Repositorio de github para clonar y trabajar sobre el proyecto: https://github.com/erikcba/aora-web
+
+* Proyecto realizado con React, generado con Vite
+
 * En el apartado etiquetas se va a detallar desde que formulario se envio la consulta (Del Hero o Footer) y desde que pagina (Home, comercial, departamentos, etc.)
 
 * Desde el home: https://aorabellavista.com/
