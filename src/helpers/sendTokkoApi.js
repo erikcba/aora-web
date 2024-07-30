@@ -9,7 +9,6 @@ const sendTokkoApi = async (data) => {
         api_key: apiKey,
         name: data.name,
         mail: data.mail,
-        message: data.message,
         phone: data.phone,
         tags: data.tags
 

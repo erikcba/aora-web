@@ -177,6 +177,10 @@ select.input option {
         margin-bottom: 2rem;
     }
 
+    .h1-mobile {
+        font-size: 2rem !important;
+    }
+
     h2 {
         font-size: 1.7rem;
     }
@@ -212,6 +216,7 @@ select.input option {
 
     .logo-mob{
         width: 100%;
+        margin-bottom: 3rem;
     }
     
 }

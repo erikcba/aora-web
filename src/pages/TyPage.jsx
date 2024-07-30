@@ -18,8 +18,8 @@ const TyPage = () => {
 
                 <div className="container">
                     <div className="container titulo d-flex flex-column align-items-center justify-content-center titulo2 gap-4">
-                        <h1 className="text-center ">¡Gracias!</h1>
-                        <h1 className="text-center ">Pronto nos comunicaremos con vos.</h1>
+                        <h1 className="text-center h1-mobile">¡Gracias!</h1>
+                        <h1 className="text-center h1-mobile">Pronto nos comunicaremos con vos.</h1>
                         <button onClick={handleClick} className="button d-flex align-items-center justify-content-center gap-2 my-2" type="submit">
                             <p className="lh-lg m-0">Continuar</p>
                             <img src={rightArrow} alt="flecha-derecha" />

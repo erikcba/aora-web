@@ -15,7 +15,7 @@ const Footer = () => {
     const [apellido, setApellido] = useState('')
     const [telefono, setTelefono] = useState('')
     const [mail, setMail] = useState('')
-    const tags = `Tipo de unidad: ${selectedOption} / Enviado desde: ${pageURL}`
+    const tags = [selectedOption, pageURL]
 
     useEffect(() => {
         setPageURL(`Form footer ${window.location.href}`)
@@ -99,17 +99,20 @@ const Footer = () => {
 
                 <div className="container my-100">
                     <div className="row col-lg-12 justify-content-between align-items-center">
-                        <div className=" col-8 col-lg-2 mb-4">
+                        <div className=" col-8 col-lg-2">
                             <img className="logo-mob" src={logoFooter} alt="" />
 
                         </div>
                         <div className=" col-8 col-lg-6">
                             <div>
-                                <img className="logo-mob mb-4" src={rootLogoFooter} alt="" />
+                                <img className="logo-mob" src={rootLogoFooter} alt="" />
                                 <img className="logo-mob" src={arqLogoFooter} alt="" />
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="container text-center text-black-50">
+                    <p className="mt-auto text-uppercase"><b>A<span className="text-decoration-underline">O</span>RA</b>. Todos los derechos reservados. Imagenes y renders ilustrativos, no contractuales.</p>
                 </div>
             </div>
 

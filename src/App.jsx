@@ -17,7 +17,6 @@ function App() {
     <>
 
       <BrowserRouter>
-
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -31,7 +30,6 @@ function App() {
         <div className="wsp-icono">
           <WspIcono />
         </div>
-
       </BrowserRouter>
     </>
   )
