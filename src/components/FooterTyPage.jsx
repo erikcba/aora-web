@@ -20,7 +20,7 @@ const FooterTyPage = () => {
                     </div>
                 </div>
                 <div className="container text-center text-black-50 mt-5">
-                    <p className="mt-auto">AORA. Todos los derechos reservados. Imagenes y renders ilustrativos, no contractuales.</p>
+                    <p className="mt-auto text-uppercase"><b>A<span className="text-decoration-underline">O</span>RA</b>. Todos los derechos reservados. Imagenes y renders ilustrativos, no contractuales.</p>
                 </div>
             </div>
 
